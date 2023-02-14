@@ -15,7 +15,7 @@ def display_matrix_lateX(M):
         for l in M:
             beginning = True
             for elem in l:
-                if (elem - int(elem) <= epsilon):
+                if (abs(elem - int(elem)) <= epsilon):
                     elem = int(elem)
                 print(f"{elem}", end=' ') if beginning else print(f"& {elem}", end=' ')
                 beginning = False
