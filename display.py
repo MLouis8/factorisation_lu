@@ -1,4 +1,10 @@
-def display_matrix(M):
+import matplotlib.pyplot as plt
+
+def display_matrix_pyplot(M):
+    plt.matshow(M)
+    plt.show()
+
+def display_matrix_lateX(M):
     print("$\\begin{pmatrix}")
     size = len(M.shape)
     if size == 1:
