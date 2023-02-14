@@ -6,6 +6,7 @@ def display_matrix_pyplot(M):
 
 def display_matrix_lateX(M):
     print("$\\begin{pmatrix}")
+    epsilon = 0.01
     size = len(M.shape)
     if size == 1:
         for elem in M:
@@ -14,6 +15,8 @@ def display_matrix_lateX(M):
         for l in M:
             beginning = True
             for elem in l:
+                if (elem - int(elem) <= epsilon):
+                    elem = int(elem)
                 print(f"{elem}", end=' ') if beginning else print(f"& {elem}", end=' ')
                 beginning = False
             print("\\\\", end='\n')
